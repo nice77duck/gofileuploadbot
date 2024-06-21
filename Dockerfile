@@ -1,10 +1,11 @@
 # Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
-# Install build dependencies
+# Install build dependencies and curl
 RUN apt-get update && apt-get install -y \
     build-essential \
     libssl-dev \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Set environment variables
